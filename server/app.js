@@ -46,6 +46,7 @@ const logging = (request, response, next) => {
   next();
 };
 
+app.use(express.json());
 app.use(cors);
 app.use(logging);
 
