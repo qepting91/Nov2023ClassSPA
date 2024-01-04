@@ -1,5 +1,4 @@
 import mongoose from "mongoose";
-import Pizza from "../models/Pizza.js";
 
 const pizzaSchema = new mongoose.Schema({
   customer: {
@@ -23,5 +22,7 @@ const pizzaSchema = new mongoose.Schema({
   },
   toppings: [String]
 });
+
+const Pizza = mongoose.model("Pizza", pizzaSchema);
 
 export default Pizza;
